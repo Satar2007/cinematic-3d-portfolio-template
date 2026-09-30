@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vercel/
+.env*
+*.bak
+*.tsbuildinfo
+.satar-backups/
+*.zip
+.DS_Store
