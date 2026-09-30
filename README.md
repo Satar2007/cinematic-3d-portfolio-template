@@ -1,101 +1,487 @@
 # Cinematic 3D Portfolio Template
 
-A customizable portfolio built with React, TypeScript, Vite, and React Three Fiber. Includes a cinematic intro, interactive 3D background, project case study, photo gallery, and responsive layouts.
+A cinematic and interactive portfolio template built for developers, designers, students, and creative explorers who want something more immersive than a conventional portfolio.
 
-**Free to copy, modify, and use for personal or commercial projects under the MIT License. Keep the license notice when redistributing the code.** Dependencies retain their own licenses.
+The template combines editorial layouts, subtle motion, interactive elements, and a Three.js powered opening experience.
 
-## What's included
+> Replace the demo identity, projects, photos, and stories with your own content.
 
-- Cinematic intro with skip, replay, and session memory.
-- Interactive Three.js scene, pointer movement, card tilt, and magnetic buttons.
-- Profile, project, toolkit, personal gallery, and contact sections.
-- Full project case study with keyboard focus handling.
-- Photo lightbox and gallery spotlight effect.
-- Reduced-motion support and a motion toggle.
-- WebGL error boundaries so decorative 3D can fail without removing the page.
-- Vercel build configuration.
+---
 
-All identity text is example content. **Demo Coffee is a fictional case study**, including its metrics, features, contributions, and testing descriptions. Replace it with your actual experience before publishing. This is a frontend portfolio, not a working POS/payment application.
+## Overview
 
-There are no personal photographs, API keys, deployment credentials, or links to the original owner's project in this template. All bundled image assets are original SVG placeholders included under the MIT License. The author attribution in LICENSE is intentionally retained.
+This project is designed as a portfolio experience rather than a simple collection of links.
 
-## Quick start
+It includes:
 
-Requirements: Node.js 22.12+ and npm.
+- Cinematic intro experience
+- Interactive 3D visual elements
+- Editorial dark interface
+- Animated navigation
+- Personal introduction section
+- Featured project / case study
+- Technology toolkit section
+- Personal story / photo gallery
+- Interactive project cards
+- Responsive layout
+- Reduced-motion support
+- GitHub repository integration
+- Production-ready Vite build
 
-Use GitHub's **Use this template** button when available, or clone the repository using its actual URL from the green Code button. Then open the cloned folder and run:
+---
 
-```sh
-npm ci
+## Preview
+
+### Cinematic Intro
+
+![Cinematic Intro](docs/screenshots/intro.png)
+
+The opening experience introduces the portfolio with animated geometry, orbital motion, and a cinematic visual identity.
+
+### Hero Experience
+
+![Hero Section](docs/screenshots/hero.png)
+
+A large editorial hero section combines personal branding, interactive motion, and a visual portrait area.
+
+### About
+
+![About Section](docs/screenshots/about.png)
+
+The about section presents identity, education, current focus, and personal interests.
+
+### Featured Project
+
+![Featured Project](docs/screenshots/project.png)
+
+A case-study layout for presenting a featured web application, technology stack, repository, and project story.
+
+### Toolkit
+
+![Toolkit](docs/screenshots/toolkit.png)
+
+Technologies and areas of exploration are presented through structured interactive cards.
+
+### Beyond the Screen
+
+![Gallery](docs/screenshots/gallery.png)
+
+A visual storytelling area for photography, travel, outdoor activities, music, or other personal interests.
+
+### Closing Experience
+
+![Closing Section](docs/screenshots/closing.png)
+
+The final section provides a clean closing statement, GitHub call-to-action, and replay controls.
+
+---
+
+## Tech Stack
+
+```text
+React
+TypeScript
+Vite
+Three.js
+CSS
+Git / GitHub
+```
+
+The project separates the main application from larger React and Three.js vendor bundles during production builds.
+
+---
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Satar2007/cinematic-3d-portfolio-template.git
+```
+
+Enter the project directory:
+
+```bash
+cd cinematic-3d-portfolio-template
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open the Local URL printed in the terminal. Do not open index.html directly.
+Vite will display the local development address, usually:
 
-## Make it yours
+```text
+http://localhost:5173
+```
 
-| File | What to change |
-| --- | --- |
-| `src/content.ts` | Brand, initials, name, location, education, bio, image paths, project URL, gallery titles and captions |
-| `src/main.tsx` | Hero text, interests, skill lists, project title, all long case-study content and metrics |
-| `src/style.css` | Colors, spacing, typography, animation and responsive styles |
-| `public/photos/` | Add your own appropriately licensed images |
-| `index.html` | Page title and description |
-| `public/favicon.svg` | Your favicon |
-| `public/site.webmanifest` | App name, short name, and theme |
+---
 
-The `profile.repository` setting starts empty. Repository buttons are hidden until you supply a real HTTPS URL; no broken example GitHub links are included.
+## Production Build
 
-Keep brand names and initials short to fit the header and intro. Update the gallery image alt text through its caption. Profile/about image alt text is also configurable in content.ts.
+Create a production build:
 
-### Add photos
-
-1. Place your own files inside `public/photos/`, for example `portrait.webp`.
-2. Set `profile.portrait` to `/photos/portrait.webp` in `src/content.ts`.
-3. Set `profile.aboutImage` and edit `galleryPhotos` entries. Gallery `src` values are filenames relative to `public/photos/`.
-4. Update captions and alt text to describe the actual images.
-5. Compress large files before committing. Never commit photos you do not intend to publish.
-
-SVG placeholders contain text and geometric gradients. Replace them to create your final portfolio. No external photo service is required.
-
-### Motion and accessibility
-
-The OS reduced-motion preference disables intro playback by default. Visitors can toggle motion in the footer. The scene is decorative; all portfolio content remains ordinary HTML. The gallery works with pointer input and keyboard focus. Case study closes with Escape. Google Fonts has system-font fallbacks.
-
-## Production build
-
-```sh
+```bash
 npm run build
+```
+
+Preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-The preview script already includes a host flag; do not add another one. The Three.js vendor bundle can trigger Vite's size warning. That warning is not a failed build. Check the published site on your target mobile devices before sharing widely.
+The generated production files will be placed in:
 
-## Deploy to Vercel
-
-Import your own repository, choose Vite, and use:
-
-- Build command: `npm run build`
-- Output directory: `dist`
-- Install command: `npm ci`
-
-These build settings are included in `vercel.json`. No environment variables are needed.
-
-Alternatively, run from this template's root:
-
-```sh
-npx vercel@latest login
-npx vercel@latest --prod
+```text
+dist/
 ```
 
-Create a **new** Vercel project for your copy. This repository contains no `.vercel` folder or links to another deployment.
+---
 
-## Publishing this repository
+## Customization
 
-Commit the source, `package-lock.json`, placeholders, README, and LICENSE. Do not commit `node_modules`, `dist`, `.vercel`, `.env`, ZIPs, or backup files; ignore rules are provided.
+The template intentionally ships with placeholder content.
 
-On GitHub, the repository owner can enable **Template repository** in repository Settings > General. Keep the repository public if you want anyone to browse and clone it.
+### Identity
 
-## License
+Open:
 
-MIT — see [LICENSE](LICENSE). No paid assets or premium components are required. Third-party dependencies and Google Fonts remain subject to their respective licenses.
+```text
+src/content.ts
+```
+
+This is the main place to replace:
+
+```text
+Brand
+Initials
+Full name
+Display name
+Location
+Education
+Short bio
+Repository URL
+Portrait
+About image
+Gallery content
+```
+
+Example:
+
+```ts
+export const profile = {
+  brand: 'FOLIO',
+  initials: 'YN',
+  fullName: 'NAMA LENGKAP KAMU',
+  displayName: 'Nama Kamu',
+  location: 'KOTA, INDONESIA',
+};
+```
+
+Replace the values without changing the object structure.
+
+---
+
+## Photos
+
+Default placeholder images are located in:
+
+```text
+public/photos/
+```
+
+You can replace them with your own images.
+
+The template currently provides placeholders for:
+
+```text
+Portrait
+About photo
+Journey photo
+Horizon photo
+Night photo
+Pause photo
+```
+
+For better performance, optimize large images before adding them to the project.
+
+Recommended formats:
+
+```text
+WebP
+AVIF
+JPEG
+PNG
+SVG
+```
+
+---
+
+## Featured Project
+
+The default featured project is intentionally fictional.
+
+It exists to demonstrate how a portfolio case study can be presented.
+
+Replace the demo project with your own:
+
+```text
+Project title
+Project description
+Problem
+Solution
+Technology stack
+Repository URL
+Case study
+Screenshots
+```
+
+Some longer portfolio copy and case-study content currently live in:
+
+```text
+src/main.tsx
+```
+
+---
+
+## Gallery
+
+The "Beyond the Screen" section is designed for content outside your main technical work.
+
+You can use it for:
+
+```text
+Photography
+Travel
+Outdoor activities
+Art
+Music
+Personal projects
+Research
+Experiments
+Stories
+```
+
+Gallery metadata can be edited from:
+
+```text
+src/content.ts
+```
+
+---
+
+## Project Structure
+
+```text
+cinematic-3d-portfolio-template/
+|
+|-- public/
+|   |-- photos/
+|   |-- favicon.svg
+|   `-- site.webmanifest
+|
+|-- src/
+|   |-- content.ts
+|   |-- main.tsx
+|   `-- style.css
+|
+|-- index.html
+|-- package.json
+|-- package-lock.json
+|-- tsconfig.json
+`-- README.md
+```
+
+The structure may evolve as new components and 3D experiences are added.
+
+---
+
+## Design Direction
+
+The interface follows a dark cinematic and editorial visual language.
+
+Core characteristics include:
+
+```text
+Dark charcoal surfaces
+Large typography
+Soft blue accents
+Generous spacing
+Geometric visual elements
+Subtle motion
+Interactive depth
+Minimal interface decoration
+```
+
+The goal is to create a portfolio that feels immersive without making navigation difficult.
+
+---
+
+## Motion and Interaction
+
+The template uses motion as part of the experience.
+
+Animations are designed to support the interface rather than distract from the content.
+
+The experience includes:
+
+```text
+Intro animation
+Cursor interaction
+Scroll-based transitions
+Hover interaction
+Animated project elements
+3D geometry
+Decorative orbital motion
+```
+
+Reduced-motion preferences are also considered.
+
+---
+
+## Performance
+
+3D experiences can become expensive to render, so performance should remain part of the design process.
+
+When expanding this template, consider:
+
+```text
+Compressing textures
+Optimizing 3D geometry
+Lazy loading heavy assets
+Using compressed GLB models
+Reducing unnecessary lighting
+Avoiding oversized textures
+Testing on mobile hardware
+Using dynamic imports where useful
+```
+
+A large Three.js bundle warning during a production build is not necessarily a build failure, but further code splitting can be added as the project grows.
+
+---
+
+## Deployment
+
+Because this is a Vite application, the generated static site can be deployed to services such as:
+
+```text
+Vercel
+Netlify
+Cloudflare Pages
+GitHub Pages
+```
+
+For Vercel, the usual workflow is:
+
+```text
+Local project
+    |
+    v
+Git repository
+    |
+    v
+GitHub
+    |
+    v
+Vercel
+    |
+    v
+Production site
+```
+
+Build command:
+
+```bash
+npm run build
+```
+
+Output directory:
+
+```text
+dist
+```
+
+---
+
+## Before Publishing Your Own Portfolio
+
+Replace all demo content before using the template as your personal portfolio.
+
+Search the project for strings such as:
+
+```text
+Nama Kamu
+NAMA LENGKAP KAMU
+YOUR PORTRAIT
+YOUR PHOTO
+Demo Coffee
+Contoh fiktif
+KOTA, INDONESIA
+```
+
+This helps make sure no placeholder content is left behind.
+
+---
+
+## Roadmap
+
+Future ideas for the template include:
+
+- More modular React components
+- Dedicated project detail pages
+- Advanced camera transitions
+- Interactive 3D room environment
+- GLTF / GLB model support
+- Improved mobile 3D fallback
+- More theme controls
+- Better content configuration
+- Image optimization workflow
+- Additional accessibility improvements
+- Performance-oriented code splitting
+
+---
+
+## Inspiration
+
+The concept combines:
+
+```text
+Code
+Visual design
+Motion
+3D interaction
+Personal storytelling
+```
+
+The objective is simple:
+
+**Make a portfolio feel like an experience, not just a page.**
+
+---
+
+## Author
+
+Created and developed by:
+
+**Rafael Paskah Bintang Pinasthi**
+
+GitHub:
+
+https://github.com/Satar2007
+
+---
+
+## Notes
+
+This repository is provided as a customizable portfolio template.
+
+Demo names, photographs, project descriptions, and personal information inside the template are placeholders and are intended to be replaced by the user.
